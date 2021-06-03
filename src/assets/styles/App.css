@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Source Code Pro'), url('../typography/SourceCodePro-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Code Pro Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Source Code Pro'), url('../typography/SourceCodePro-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Karla'), url('../typography/Karla-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Karla Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Karla'), url('../typography/Karla-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'News Cycle';
+  font-style: normal;
+  font-weight: normal;
+  src: local('News Cycle'), url('../typography/NewsCycle-Regular.ttf') format('truetype');
+}
+
+body {
+  background-color: #dee5e5;
+  background-image: url('../so-white.png');
+  background-attachment: fixed;
+
+  font-family: "News Cycle", sans-serif;
+
+}

@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import {Container} from "react-bootstrap"
+
+import './assets/styles/App.css';
+import Navbar from "./components/Navbar.js"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div>
+        <Navbar />
+        <div className="App" style={{textAlign: "center"}}>
+          <h2>ES Frontend</h2>
+          <br/>
+          <h1>Testing the typography</h1>
+          <h1>How are you feeling today</h1>
+          <h2>Testing the typography</h2>
+          <h5>Testing the typography</h5>
+          <p
+            style={{fontSize: 36}}
+          >Loren ipsum dolor sit amet sit consectutor zombadingerz</p>
+
+        </div>
+
     </div>
   );
 }
