@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
+
+import 'animate.css'
+
+import './assets/styles/App.css';
+
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

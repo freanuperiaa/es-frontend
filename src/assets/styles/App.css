@@ -36,6 +36,7 @@
 body {
   background-color: #dee5e5;
   background-image: url('../so-white.png');
+  /* background-image: url('../watercolor.png'); */
   background-attachment: fixed;
 
   font-family: "News Cycle", sans-serif;

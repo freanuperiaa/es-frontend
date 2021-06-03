@@ -7,7 +7,11 @@ import '../assets/styles/Navbar.css'
 const NavBar = () => {
     return (
         <Navbar className="my-nav " expand="lg" variant="light">
-            <Navbar.Brand className="text-white">howimfeelingnow.</Navbar.Brand>
+            <Navbar.Brand>
+                <p className="navbar-brand">
+                howimfeelingnow.
+                </p>
+            </Navbar.Brand>
         </Navbar>
     )
 }
