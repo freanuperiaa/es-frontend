@@ -19,7 +19,7 @@ function App() {
 
         <Container>
             <Row className="mt-5 justify-content-center">
-                <Col xs={12} md={10} lg={8} xl={8}>
+                <Col xs={11} md={10} lg={8} xl={8}>
                     <Home />
                 </Col>
             </Row>

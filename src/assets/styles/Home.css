@@ -1,0 +1,106 @@
+.home-container {
+    background-color: #FFF;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 25px 30px;
+    margin-top: 15%;
+
+    /* shadow */
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 10px -6px #999;
+}
+
+.heading {
+    font-size: 32px;
+}
+
+.subheading {
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+.buttons-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 80px;
+    margin-top: 50px;
+}
+
+.about-button {
+    /* background-color: paleturquoise; */
+    background-color: lightblue;
+    border: 0px;
+    color: black;
+    font-style: "Source Code Pro";
+    width: 120px;
+    height: 60px;
+    font-size: 24px;
+}
+
+.about-button:hover {
+    /* background-color: paleturquoise; */
+    background-color: lightblue;
+    border: 0px;
+}
+
+.about-button:focus {
+    /* background-color: paleturquoise; */
+    background-color: lightblue;
+    border: 0px;
+}
+
+.start-button {
+    /* background-color: lightgreen; */
+    background-color: lightgrey;
+    border: 0px;
+    color: black;
+    font-style: "Source Code Pro";
+    width: 120px;
+    height: 60px;
+    font-size: 24px;
+}
+
+.start-button:hover {
+    /* background-color: lightgreen; */
+    background-color: lightgrey;
+    border: 0px;
+}
+
+.start-button:focus {
+    /* background-color: lightgreen; */
+    background-color: lightgrey;
+    border: 0px;
+}
+
+@media (max-width: 990px) {
+
+    .home-container {
+        margin-top: 25%;
+    }
+
+    .buttons-row {
+        padding: 5px 0px;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+
+    .subheading {
+        font-size: 24px;
+    }
+
+    .about-button {
+        width: 80px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .start-button {
+        width: 80px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
