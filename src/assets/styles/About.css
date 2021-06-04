@@ -1,0 +1,73 @@
+.about-container {
+    background-color: #FFF;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 25px 30px;
+    margin-top: 5%;
+
+    /* shadow */
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 10px -6px #999;
+}
+
+.about-one {
+    font-size: 26px;
+}
+
+.howimfeelingnow {
+    font-family: 'Source Code Pro Light';
+    font-weight: lighter;
+}
+
+.sad {
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+    color: darkslategray;
+}
+
+.depressed {
+    font-family: Abel;
+    font-weight: bold;
+    font-style: italic;
+    color: darkslateblue;
+}
+
+.perturbed {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.something-wrong {
+    font-family: sans-serif;
+    font-style: italic;
+    color: darkred;
+}
+
+.overly-happy {
+    font-family: "Source Code Pro";
+    font-weight: bold;
+    font-size: 32px;
+    color: #ffce45;
+}
+
+.about-two {
+    margin-top: 15%;
+    font-size: 18px;
+}
+
+.suicidal {
+    font-family: "Abel";
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.mental-health {
+    color: blue;
+}
+
+.link {
+    text-transform: none;
+    color: black;
+}

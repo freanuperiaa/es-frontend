@@ -33,10 +33,24 @@
   src: local('News Cycle'), url('../typography/NewsCycle-Regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Abel';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Abel'), url('../typography/Abel-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Quicksand'), url('../typography/Quicksand-VariableFont_wght.ttf') format('truetype');
+}
+
 body {
   background-color: #dee5e5;
-  background-image: url('../so-white.png');
-  /* background-image: url('../watercolor.png'); */
+  /* background-image: url('../so-white.png'); */
+  background-image: url('../watercolor.png');
   background-attachment: fixed;
 
   font-family: "News Cycle", sans-serif;

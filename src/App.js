@@ -11,6 +11,7 @@ import {
 import './assets/styles/App.css';
 import Navbar from "./components/Navbar.js"
 import Home from "./components/home/Home.js"
+import About from "./components/about/About.js"
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Container>
             <Row className="mt-5 justify-content-center">
                 <Col xs={11} md={10} lg={8} xl={8}>
-                    <Home />
+                    <About />
                 </Col>
             </Row>
         </Container>
