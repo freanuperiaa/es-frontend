@@ -6,7 +6,7 @@ import {
   Row,
   Col,
 } from "react-bootstrap"
-
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import './assets/styles/App.css';
 import Navbar from "./components/Navbar.js"
@@ -16,16 +16,19 @@ import About from "./components/about/About.js"
 function App() {
   return (
     <div>
-        <Navbar />
-
-        <Container>
-            <Row className="mt-5 justify-content-center">
-                <Col xs={11} md={10} lg={8} xl={8}>
-                    <About />
-                </Col>
-            </Row>
-        </Container>
-
+        <BrowserRouter>    
+            <Navbar />
+            <Container>
+                <Row className="mt-5 justify-content-center">
+                    <Col xs={11} md={10} lg={8} xl={8}>
+                        <Switch>
+                            <Route exact path="/" component={Home} />
+                            <Route exact path="/about" component={About} />
+                        </Switch>
+                    </Col>
+                </Row>
+            </Container>
+        </BrowserRouter>
     </div>
   );
 }

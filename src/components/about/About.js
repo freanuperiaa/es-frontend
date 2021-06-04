@@ -23,6 +23,7 @@ const About = () => {
                 <span className="suicidal">suicidal.</span> &nbsp;
                 <br />
                 <br />
+                <span className="read-more">
                 Read more about <span className="mental-health">Mental Health</span> &nbsp;
                 <a 
                     href="https://www.mentalhealth.gov/basics/what-is-mental-health"
@@ -30,6 +31,7 @@ const About = () => {
                 >
                     here
                 </a>.
+                </span>
             </p>
 
             <p className="about-two">
