@@ -12,6 +12,9 @@ import './assets/styles/App.css';
 import Navbar from "./components/Navbar.js"
 import Home from "./components/home/Home.js"
 import About from "./components/about/About.js"
+import Start from "./components/start/Start.js"
+import Test from "./components/test/Test.js"
+import Results from "./components/results/Results.js"
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
                         <Switch>
                             <Route exact path="/" component={Home} />
                             <Route exact path="/about" component={About} />
+                            <Route exact path="/start" component={Start} />
+                            <Route exact path="/test" component={Test} />
+                            <Route exact path="/test/results" component={Results} />
                         </Switch>
                     </Col>
                 </Row>

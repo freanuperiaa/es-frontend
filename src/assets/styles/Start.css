@@ -1,0 +1,70 @@
+.start-container {
+    background-color: #FFF;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 25px 30px;
+    margin-top: 15%;
+    font-weight: lighter;
+
+    /* shadow */
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 10px -6px #999;
+}
+
+.before-anything {
+    font-size: 28px;
+    animation-duration: 2s;
+}
+
+.tell-you {
+    font-size: 28px;
+    animation-duration: 2s;
+    animation-delay: 2s;
+}
+
+.is-valid {
+    font-size: 28px;
+    animation-duration: 2s;
+    animation-delay: 4s;
+}
+
+.valid {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Source Code Pro Light";
+    margin: 0px 5px;
+}
+
+.button-row {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 50px 40px 15px;
+}
+
+.continue-button {
+    align-items: end;
+    background-color: lightblue;
+    border: 0px;
+    color: black;
+    font-style: "Source Code Pro";
+    width: 120px;
+    height: 60px;
+    font-size: 24px;
+
+    animation-delay: 6s;
+}
+
+.continue-button:hover {
+    /* background-color: lightgreen; */
+    /* background-color: lightgrey; */
+    background-color: lightblue;
+    border: 0px;
+}
+
+.continue-button:focus {
+    /* background-color: lightgreen; */
+    /* background-color: lightgrey; */
+    background-color: lightblue;
+    border: 0px;
+}

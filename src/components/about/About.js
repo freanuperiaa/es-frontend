@@ -1,4 +1,6 @@
 import React from "react";
+import {Link} from "react-router-dom";
+import {Button} from "react-bootstrap";
 
 import "../../assets/styles/About.css"
 
@@ -37,6 +39,13 @@ const About = () => {
             <p className="about-two">
                 This is a project for CS 404 - Expert Systems, developed by Mickaela Jeorge Mendoza, Mark Alfie Mercado, and Freanu Peria.
             </p>
+
+            <Link to="/">
+                <Button className="back-button">
+                    Go back
+                </Button>
+            </Link>
+
         </div>
     )
 }

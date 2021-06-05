@@ -13,7 +13,9 @@ const Home = () => {
                 <Link to="/about">
                     <Button className="about-button">About</Button>
                 </Link>
-                <Button className="start-button">Start</Button>
+                <Link to="/start">
+                    <Button className="start-button">Start</Button>
+                </Link>
             </div>
         </div>
     )

@@ -75,3 +75,29 @@
 .read-more {
     font-size: 20px;
 }
+
+.back-button {
+    /* background-color: paleturquoise; */
+    /* background-color: lightblue; */
+    background-color: lightgrey;
+    border: 0px;
+    color: black;
+    font-style: "Source Code Pro";
+    width: 120px;
+    height: 60px;
+    font-size: 24px;
+}
+
+.back-button:hover {
+    /* background-color: paleturquoise; */
+    /* background-color: lightblue; */
+    background-color: lightgrey;
+    border: 0px;
+}
+
+.back-button:focus {
+    /* background-color: paleturquoise; */
+    /* background-color: lightblue; */
+    background-color: lightgrey;
+    border: 0px;
+}
