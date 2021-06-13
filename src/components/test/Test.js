@@ -3,6 +3,7 @@ import {Button} from "react-bootstrap";
 import {Link, useParams} from "react-router-dom"
 
 import "../../assets/styles/Test.css"
+import Answers from "./Answers.js"
 import {questions} from "../../utils/generic.utils.js"
 
 
@@ -10,15 +11,25 @@ const Test = () => {
 
     let {category} = useParams();
     let [curQuestionIndex, setCurQuestionIndex] = useState(0);
+    let [curAnswers, setCurAnswers] = useState([])
+    let [curAnswer, setCurAnswer] = useState({})
 
     let previousQuestion = () => {
         let newCurrentQuestionIndex = curQuestionIndex - 1;
         setCurQuestionIndex(newCurrentQuestionIndex)
+        setCurAnswers(curAnswers.splice(-1, 1))
     }
 
     let nextQuestion = () => {
         let newCurrentQuestionIndex = curQuestionIndex + 1;
         setCurQuestionIndex(newCurrentQuestionIndex)
+        setCurAnswers([...curAnswers, curAnswer])
+        setCurAnswer({})
+    }
+
+    let selectAnswer = (answer) => {
+        console.log(curAnswers)
+        setCurAnswer(answer)
     }
 
     /**
@@ -40,7 +51,10 @@ const Test = () => {
                 </p>
 
                 <div className="answers">
-                    
+                    <Answers 
+                        answers={currentQuestions[curQuestionIndex].answers}
+                        selectAnswerCallback={selectAnswer}
+                    />
                 </div>
             </div>
 

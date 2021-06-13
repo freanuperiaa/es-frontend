@@ -1,0 +1,22 @@
+.answers-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.answer-button {
+    width: 45% !important;
+    background-color: #fff;
+    border: 2px solid #FA92C1;
+    color: grey;
+    padding: 10px 0px;
+    margin: 7px 0px;
+}
+
+.answer-button:hover,
+.answer-button:active,
+.answer-button:focus {
+    background-color: #fff;
+    color: black;
+    border: 2px solid #FA92C1;
+}
