@@ -31,7 +31,7 @@ function App() {
                             <Route exact path="/start" component={Start} />
                             <Route exact path="/category-select" component={CategorySelect}/>
                             <Route exact path="/test/:category" component={Test} />
-                            <Route exact path="/test/results" component={Results} />
+                            <Route exact path="/results" component={Results} />
                         </Switch>
                     </Col>
                 </Row>

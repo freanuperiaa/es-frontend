@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {Button} from "react-bootstrap";
-import {Link, useParams} from "react-router-dom"
+import {Link, useParams, useHistory} from "react-router-dom"
 import Swal from 'sweetalert2'
 
 import "../../assets/styles/Test.css"
@@ -15,6 +15,8 @@ const Test = () => {
     let [curAnswers, setCurAnswers] = useState([])
     let [curAnswer, setCurAnswer] = useState({})
 
+    const history = useHistory()
+
     let previousQuestion = () => {
         let newCurrentQuestionIndex = curQuestionIndex - 1;
         setCurQuestionIndex(newCurrentQuestionIndex)
@@ -24,15 +26,12 @@ const Test = () => {
     }
 
     let nextQuestion = () => {
-        console.log(curAnswer)
         if (Object.keys(curAnswer).length != 0) { // https://medium.com/@carlibotes/is-the-object-is-empty-afdabee326dc
-            console.log('curAnswer is not empty')
             let newCurrentQuestionIndex = curQuestionIndex + 1;
             setCurQuestionIndex(newCurrentQuestionIndex)
             setCurAnswers([...curAnswers, curAnswer])
             setCurAnswer({})
         }else {
-            console.log('curAnswer is empty')
             Swal.fire({
                 title: 'Woah there',
                 text: 'Please pick an answer',
@@ -44,8 +43,24 @@ const Test = () => {
     }
 
     let selectAnswer = (answer) => {
-        console.log(curAnswers)
         setCurAnswer(answer)
+    }
+
+    let submitAnswers = () => {
+
+        /**
+        this can be easily and elegantly done with state management, but im lazy
+        got into more trouble instead lol
+        anyways, here's a solution, apparently react-router's location works like a charm
+        https://stackoverflow.com/questions/59464337/how-to-send-params-in-usehistory-of-react-router-dom#
+         */
+        
+
+        history.push("/results", {params: {
+            category: category,
+            score: "alzate",
+            total: "peria"
+        }})
     }
 
     /**
@@ -90,7 +105,7 @@ const Test = () => {
                     (curQuestionIndex + 1) === currentQuestions.length
                         ? <Button
                             className="proceed"
-                            onClick={() => {console.log("proceed button clicked")}}
+                            onClick={submitAnswers()}
                           >
                             Submit Answers  
                           </Button>
