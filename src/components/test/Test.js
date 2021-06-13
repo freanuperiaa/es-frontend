@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {Button} from "react-bootstrap";
 import {Link, useParams} from "react-router-dom"
+import Swal from "sweetalert2/dist/sweetalert2.js"
 
 import "../../assets/styles/Test.css"
 import Answers from "./Answers.js"
@@ -23,10 +24,12 @@ const Test = () => {
     }
 
     let nextQuestion = () => {
+        console.log(curAnswer)
         let newCurrentQuestionIndex = curQuestionIndex + 1;
         setCurQuestionIndex(newCurrentQuestionIndex)
         setCurAnswers([...curAnswers, curAnswer])
         setCurAnswer({})
+
     }
 
     let selectAnswer = (answer) => {
@@ -72,13 +75,21 @@ const Test = () => {
                             </Button>
                 }
 
-                <Button 
-                    className="next-button"
-                    onClick={nextQuestion}
-                >
-                    Next
-                </Button>
-                
+                {
+                    (curQuestionIndex + 1) === currentQuestions.length
+                        ? <Button
+                            className="proceed"
+                            onClick={() => {console.log("proceed button clicked")}}
+                          >
+                            Submit Answers  
+                          </Button>
+                        : <Button 
+                              className="next-button"
+                              onClick={nextQuestion}
+                          >
+                              Next
+                          </Button>
+                }
             </div>
 
         </div>

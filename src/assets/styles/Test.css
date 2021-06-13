@@ -83,3 +83,21 @@
 .question {
     font-size: 24px;
 }
+
+.proceed {
+    background-color: #FA92C1;
+    border: 0px;
+    color: black;
+    font-style: "Source Code Pro";
+    width: 180px;
+    height: 60px;
+    font-size: 20px;
+}
+
+.proceed:hover,
+.proceed:focus,
+.proceed:active {
+    background-color: #FA92C1;
+    border: 0px;
+    color: white;
+}
