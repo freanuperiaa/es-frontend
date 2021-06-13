@@ -70,9 +70,6 @@ const Test = () => {
     let currentQuestions = questions["depression"].questions
     let totalScore = questions["depression"].totalScore
 
-    console.log(curQuestionIndex)
-    console.log(curAnswers.length)
-
     return (
         <div className="test-container">
             <p className="title">{category} Test</p>
