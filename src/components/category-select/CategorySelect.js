@@ -80,10 +80,7 @@ const CategorySelect = () => {
 
             <div class="proceed-button-cont">
                 <Link 
-                    to={{
-                        pathName: "/test",
-                        category: category
-                    }}
+                    to={"/test/" + category}
                 >
                     <Button className="proceed-button">Proceed</Button>
                 </Link>

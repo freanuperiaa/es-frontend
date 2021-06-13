@@ -1,14 +1,16 @@
 import React from "react";
 import {Button} from "react-bootstrap";
-import {Link} from "react-router-dom"
+import {Link, useParams} from "react-router-dom"
 
 import "../../assets/styles/Test.css"
 
 
 const Test = (props) => {
 
-    console.log(props.location.category)
+    let {category} = useParams();
 
+    console.log("freanuasdasdasd", category)
+    
     return (
         <div className="test-container">
             <h3>*Questions here*</h3>
