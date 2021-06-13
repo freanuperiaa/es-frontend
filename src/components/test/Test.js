@@ -17,7 +17,6 @@ const Test = () => {
     let previousQuestion = () => {
         let newCurrentQuestionIndex = curQuestionIndex - 1;
         setCurQuestionIndex(newCurrentQuestionIndex)
-        setCurAnswers(curAnswers.splice(-1, 1))
     }
 
     let nextQuestion = () => {
