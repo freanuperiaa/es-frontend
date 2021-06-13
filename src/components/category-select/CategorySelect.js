@@ -38,7 +38,7 @@ const CategorySelect = () => {
 
     return (
         <div className="category-select-container">
-            <p class="main-text">Now please tell us,</p>
+            <p className="main-text">Now please tell us,</p>
             <p className="main-text">what are you most worried of?</p>
 
             <div className="buttons-column">
@@ -78,7 +78,7 @@ const CategorySelect = () => {
                 </Button>
             </div>
 
-            <div class="proceed-button-cont">
+            <div className="proceed-button-cont">
                 <Link 
                     to={"/test/" + category}
                 >
