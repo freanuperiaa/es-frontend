@@ -101,3 +101,9 @@
     border: 0px;
     color: white;
 }
+
+body > div.swal2-container.swal2-center.swal2-backdrop-show > div > div.swal2-actions > button.swal2-confirm.swal2-styled {
+    /* selector for the button on the sweetalert modal */
+    /* I literally copied it from inspector tools lol */
+    background-color:#FA92C1;
+}

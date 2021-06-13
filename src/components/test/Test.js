@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Button} from "react-bootstrap";
 import {Link, useParams} from "react-router-dom"
-import Swal from "sweetalert2/dist/sweetalert2.js"
+import Swal from 'sweetalert2'
 
 import "../../assets/styles/Test.css"
 import Answers from "./Answers.js"
@@ -25,10 +25,21 @@ const Test = () => {
 
     let nextQuestion = () => {
         console.log(curAnswer)
-        let newCurrentQuestionIndex = curQuestionIndex + 1;
-        setCurQuestionIndex(newCurrentQuestionIndex)
-        setCurAnswers([...curAnswers, curAnswer])
-        setCurAnswer({})
+        if (Object.keys(curAnswer).length != 0) { // https://medium.com/@carlibotes/is-the-object-is-empty-afdabee326dc
+            console.log('curAnswer is not empty')
+            let newCurrentQuestionIndex = curQuestionIndex + 1;
+            setCurQuestionIndex(newCurrentQuestionIndex)
+            setCurAnswers([...curAnswers, curAnswer])
+            setCurAnswer({})
+        }else {
+            console.log('curAnswer is empty')
+            Swal.fire({
+                title: 'Woah there',
+                text: 'Please pick an answer',
+                icon: 'warning',
+                confirmButtonText: 'Okay'
+            })
+        }
 
     }
 
