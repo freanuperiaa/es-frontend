@@ -48,19 +48,38 @@ const Test = () => {
 
     let submitAnswers = () => {
 
-        /**
-        this can be easily and elegantly done with state management, but im lazy
-        got into more trouble instead lol
-        anyways, here's a solution, apparently react-router's location works like a charm
-        https://stackoverflow.com/questions/59464337/how-to-send-params-in-usehistory-of-react-router-dom#
-         */
-        
+        if (Object.keys(curAnswer).length != 0) {
+            setCurAnswers([...curAnswers, curAnswer])
+            
+            let sum = 0;
+            curAnswers.forEach(answer => {
+                sum += answer.score
+            })
 
-        history.push("/results", {params: {
-            category: category,
-            score: "alzate",
-            total: "peria"
-        }})
+            // Since the last question is not included in the `curAnswers` array above, i'll just add it lol
+            sum += curAnswer.score;
+    
+            /**
+            this can be easily and elegantly done with state management, but im lazy
+            got into more trouble instead lol
+            anyways, here's a solution, apparently react-router's location works like a charm
+            https://stackoverflow.com/questions/59464337/how-to-send-params-in-usehistory-of-react-router-dom#
+             */
+            history.push("/results", {params: {
+                category: category,
+                score: sum,
+                total: questions["depression"].totalScore
+            }})
+        }else {
+            Swal.fire({
+                title: 'Woah there',
+                text: 'Please pick an answer',
+                icon: 'warning',
+                confirmButtonText: 'Okay'
+            })
+        }
+
+
     }
 
     /**
