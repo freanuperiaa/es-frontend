@@ -70,7 +70,9 @@ const Test = () => {
     let currentQuestions = questions["depression"].questions
     let totalScore = questions["depression"].totalScore
 
-    
+    console.log(curQuestionIndex)
+    console.log(curAnswers.length)
+
     return (
         <div className="test-container">
             <p className="title">{category} Test</p>
@@ -102,19 +104,19 @@ const Test = () => {
                 }
 
                 {
-                    (curQuestionIndex + 1) === currentQuestions.length
-                        ? <Button
-                            className="proceed"
-                            onClick={submitAnswers()}
-                          >
-                            Submit Answers  
-                          </Button>
-                        : <Button 
+                    (curQuestionIndex + 1) < currentQuestions.length
+                        ? <Button 
                               className="next-button"
                               onClick={nextQuestion}
                           >
                               Next
                           </Button>
+                        : <Button
+                          className="proceed"
+                          onClick={() => {submitAnswers()}}
+                        >
+                          Submit Answers  
+                        </Button>
                 }
             </div>
 
