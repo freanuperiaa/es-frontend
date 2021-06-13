@@ -15,6 +15,7 @@ import About from "./components/about/About.js"
 import Start from "./components/start/Start.js"
 import Test from "./components/test/Test.js"
 import Results from "./components/results/Results.js"
+import CategorySelect from "./components/category-select/CategorySelect.js"
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
                             <Route exact path="/" component={Home} />
                             <Route exact path="/about" component={About} />
                             <Route exact path="/start" component={Start} />
+                            <Route exact path="/category-select" component={CategorySelect}/>
                             <Route exact path="/test" component={Test} />
                             <Route exact path="/test/results" component={Results} />
                         </Switch>

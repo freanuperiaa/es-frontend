@@ -38,7 +38,7 @@ const Start = () => {
             </p>
 
             <div className="button-row">
-                <Link to="/test">
+                <Link to="/category-select">
                     <Button 
                         className="continue-button animate__animated animate__pulse"
                         style={buttonStyle}
