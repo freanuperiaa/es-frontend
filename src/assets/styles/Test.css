@@ -70,3 +70,12 @@
     background-color: lightblue;
     border: 0px;
 }
+
+.title {
+    text-align: center;
+    font-size:28px;
+}
+
+.sub-title {
+    font-size: 20px;
+}

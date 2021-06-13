@@ -1,4 +1,4 @@
-questions = {
+export const questions = {
     "depression": [
         {
             "question": "Difficulty focusing on everyday tasks",
