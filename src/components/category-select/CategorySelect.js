@@ -79,7 +79,14 @@ const CategorySelect = () => {
             </div>
 
             <div class="proceed-button-cont">
-                <Button className="proceed-button">Proceed</Button>
+                <Link 
+                    to={{
+                        pathName: "/test",
+                        category: category
+                    }}
+                >
+                    <Button className="proceed-button">Proceed</Button>
+                </Link>
             </div>
 
         </div>
