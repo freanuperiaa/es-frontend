@@ -17,6 +17,9 @@ const Test = () => {
     let previousQuestion = () => {
         let newCurrentQuestionIndex = curQuestionIndex - 1;
         setCurQuestionIndex(newCurrentQuestionIndex)
+        let curAns = curAnswers;
+        curAns.pop()
+        setCurAnswers(curAns)
     }
 
     let nextQuestion = () => {
@@ -58,12 +61,16 @@ const Test = () => {
             </div>
 
             <div className="buttons-row">
-                <Button 
-                    className="previous-button"
-                    onClick={previousQuestion}
-                >
-                    Previous
-                </Button>
+                {
+                    curAnswers.length === 0
+                        ? <div></div>
+                        :   <Button 
+                                className="previous-button"
+                                onClick={previousQuestion}
+                            >
+                                Previous
+                            </Button>
+                }
 
                 <Button 
                     className="next-button"
