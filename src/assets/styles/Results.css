@@ -3,10 +3,44 @@
     border: 1px solid black;
     border-radius: 25px;
     padding: 25px 30px;
-    margin-top: 15%;
+    margin-top: 10%;
+
+    align-items: center;
 
     /* shadow */
     -webkit-box-shadow: 0 8px 6px -6px #999;
     -moz-box-shadow: 0 8px 6px -6px #999;
     box-shadow: 0 8px 10px -6px #999;
+}
+
+.results-title {
+    font-size: 28px;
+    text-align: start;
+    margin: 5px 25px 30px;
+}
+
+.progressbar-container {
+    width: 25%;
+    height: 25%;
+    margin: 10px auto;
+}
+
+.inside-progress-image {
+    font-size:42px;
+}
+
+.inside-progress-text {
+    font-size: 22px
+}
+
+.diagnosis {
+    font-size: 22px;
+}
+
+.message-for-all {
+    font-size: 18px;
+}
+
+.external-links {
+    font-size: 16px;
 }
