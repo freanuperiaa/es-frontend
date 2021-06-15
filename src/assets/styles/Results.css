@@ -43,6 +43,7 @@
 }
 
 .external-links {
+    margin-top: 35px;
     font-size: 16px;
     font-family: "Source Code Pro Light";
 }
@@ -71,5 +72,9 @@
 
     .message-for-all {
         font-size: 16px;
+    }
+
+    .nonce {
+        height: 25px;
     }
 }

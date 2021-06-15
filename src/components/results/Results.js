@@ -42,6 +42,22 @@ const Results = () => {
                             ? highRiskMessage
                             : severeMessage
 
+    let getLongMessage = () => {
+        if (category === "depression") {
+            return "Depression is a common mood disorder that causes a persistent feeling of sadness and loss of interest. Being depressed can feel like you are carrying a heavy burden, but know that you are not alone. Whether you might have it or not, always remember that it's okay to reach out to a loved one for support. It’s okay to ask for help. It’s okay to scream and cry, and it’s okay to laugh. You are loved. It will pass, even though it feels like it won't. "
+        } else if (category === "anxiety") {
+            return "People with anxiety disorders frequently have intense, excessive and persistent worry and fear about everyday situations. Often, anxiety disorders involve repeated episodes of sudden feelings of intense anxiety and fear or terror that reach a peak within minutes called a panic attack. When you're feeling anxious, opening up to a friend helps reduce this feeling. Your worries may not go away on their own, but opening up to others is usually a positive experience that strengthens relationships and makes you feel supported."
+        } else if (category === "mania") {
+            return "Mania is a mental illness marked by periods of great excitement or euphoria, delusions, and overactivity. Whenever you feel any cause of concern in your personal behavior, talk to others about how you are feeling. Remember that whatever it is that you are feeling, it is valid. Sometimes the feeling may not go away on its own, so do not be afraid to ask for help. Sometimes getting support makes all the difference. "
+        } else if (category === "bipolar") {
+            return "Bipolar Disorder is a mental health disorder that causes extreme shifts in a person's mood, energy, and ability to function. People with bipolar disorder experience intense emotional states that typically occur during distinct periods of days to weeks, called mood episodes. Whether you have this condition or not, remember that opening up to someone goes a long way when you are feeling confused. Whenever you feel like giving up, tell yourself to hold on for another minute, hour, day — whatever you feel you can do."
+        } else if (category === "ptsd") {
+            return "Post-traumatic stress disorder (PTSD) is a mental health condition that's triggered by a terrifying event — either experiencing it or witnessing it. Symptoms may include flashbacks, nightmares and severe anxiety, as well as uncontrollable thoughts about the event. If you have ever had any traumatic experience before, getting help and support as soon as possible may prevent normal stress reactions from getting worse and developing into PTSD. Turn to your family and friends who will listen and offer you comfort. You may also consider seeking out a mental health professional for a brief course of therapy."
+        } else {
+            return ""
+        }
+    }
+
     let getTitle = () => {
         if (category === "depression") return "Depression"
         else if (category === "anxiety") return "Anxiety"
@@ -80,9 +96,7 @@ const Results = () => {
             <div className="results-body">
                 <p className="diagnosis">{message}</p>
 
-                <p className="message-for-all">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar imperdiet justo. Nullam in purus eros. Maecenas viverra aliquet velit, a finibus tortor vestibulum a. Vestibulum aliquam et arcu at pulvinar. Aliquam aliquam auctor mi, quis interdum mauris finibus vitae. In id lobortis lacus, ut pretium dui. Aliquam a eros turpis. Duis vitae tortor quis arcu auctor tempus ut vitae sem. Morbi ut nunc a felis auctor consequat. Nam luctus nibh fermentum elit iaculis venenatis in in urna.
-                </p>
+                <p className="message-for-all">{getLongMessage()}</p>
 
                 <p className="external-links">
                     Read more about mental health &nbsp;
@@ -92,7 +106,7 @@ const Results = () => {
                     >
                         <strong>here</strong>
                     </a>.
-                    <br/>
+                    <br/><div className="nonce"></div>
                     List of mental health professionals in the Philippines:&nbsp;
                     <a 
                         href="http://www.silakbo.ph/help/"
