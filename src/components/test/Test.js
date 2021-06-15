@@ -33,8 +33,8 @@ const Test = () => {
             setCurAnswer({})
         }else {
             Swal.fire({
-                title: 'Woah there',
-                text: 'Please pick an answer',
+                title: 'Wait...',
+                text: 'Please pick an answer.',
                 icon: 'warning',
                 confirmButtonText: 'Okay'
             })
@@ -73,7 +73,7 @@ const Test = () => {
         }else {
             Swal.fire({
                 title: 'Woah there',
-                text: 'Please pick an answer',
+                text: 'Please pick an answer.',
                 icon: 'warning',
                 confirmButtonText: 'Okay'
             })

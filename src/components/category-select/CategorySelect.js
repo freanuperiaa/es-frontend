@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 import {Button} from "react-bootstrap";
-import {Link} from "react-router-dom"
+import {useHistory} from "react-router-dom"
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover'
+import Swal from 'sweetalert2'
 
 import "../../assets/styles/CategorySelect.css"
 
@@ -17,6 +18,8 @@ const CategorySelect = () => {
      */
 
     let [category, setCategory] = useState("");
+
+    const history = useHistory();
 
     let onCatOneClick = (e) => {
         setCategory("depression");
@@ -103,6 +106,19 @@ const CategorySelect = () => {
         </Popover>
     )
 
+    let proceed = () => {
+        if (category !== "") history.push("/test" + category)
+        else {
+            Swal.fire({
+                title: 'Wait',
+                text: 'Please pick a category.',
+                icon: 'warning',
+                confirmButtonText: 'Okay'
+            })
+        }
+
+    }
+
     return (
         <div className="category-select-container">
             <p className="main-text">Now please tell us,</p>
@@ -184,11 +200,13 @@ const CategorySelect = () => {
             </div>
 
             <div className="proceed-button-cont">
-                <Link 
-                    to={"/test/" + category}
+                <Button 
+                    className="proceed-button"
+                    onClick={() => {proceed()}}
                 >
-                    <Button className="proceed-button">Proceed</Button>
-                </Link>
+                    Proceed
+                </Button>
+                
             </div>
 
         </div>
