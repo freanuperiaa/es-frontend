@@ -107,7 +107,7 @@ const CategorySelect = () => {
     )
 
     let proceed = () => {
-        if (category !== "") history.push("/test" + category)
+        if (category !== "") history.push("/test/" + category)
         else {
             Swal.fire({
                 title: 'Wait',
