@@ -24,11 +24,11 @@ const About = () => {
                     <br/>
                     <br/>
                     <span className="howimfeelingnow">howimfeelingnow.</span> is an app for those people who feel &nbsp;
-                    <span className="sad">sad</span>, &nbsp;
-                    <span className="depressed">depressed</span>, &nbsp;
-                    <span className="perturbed">perturbed</span>, &nbsp;
-                    <span className="something-wrong">like there's something wrong</span>, &nbsp;
-                    <span className="overly-happy">overly happy</span>, &nbsp;
+                    <span className="sad emotions">sad</span>, &nbsp;
+                    <span className="depressed emotions">depressed</span>, &nbsp;
+                    <span className="perturbed emotions">perturbed</span>, &nbsp;
+                    <span className="something-wrong emotions">like there's something wrong</span>, &nbsp;
+                    <span className="overly-happy emotions">overly happy</span>, &nbsp;
                     <span className="suicidal">suicidal.</span> &nbsp;
                     <br />
                     <br />
@@ -47,11 +47,13 @@ const About = () => {
                     This is a project for CS 404 - Expert Systems, developed by Mickaela Jeorge Mendoza, Mark Alfie Mercado, and Freanu Peria.
                 </p>
 
-                <Link to="/">
-                    <Button className="back-button">
-                        Go back
-                    </Button>
-                </Link>
+                <div className="button-row">
+                    <Link to="/">
+                        <Button className="back-button">
+                            Go back
+                        </Button>
+                    </Link>
+                </div>
 
             </div>
         

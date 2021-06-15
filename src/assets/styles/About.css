@@ -101,3 +101,44 @@
     background-color: lightgrey;
     border: 0px;
 }
+
+@media (max-width: 990px) {
+    .about-container {
+        margin: 0px 0px 10%;
+        padding: 20px;
+
+    }
+
+    .howimfeelingnow {
+        font-size: 20px;
+    }
+
+    .about-one {
+        font-size: 18px;
+    }
+
+    .emotions {
+        font-size: 18px;
+    }
+
+    .read-more {
+        font-size: 17px;
+    }
+
+    .about-two {
+        font-size: 15px;
+    }
+
+    .back-button {
+        width: 90px;
+        height: 50px;
+        font-size: 20px;
+        margin: 0px auto;
+    }
+
+    .button-row {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 50px 40px 5px;
+    }
+}
