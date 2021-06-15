@@ -4,7 +4,7 @@ import {useHistory} from "react-router-dom"
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover'
 import Swal from 'sweetalert2'
-import {AnimatePresence, motion} from "framer-motion";
+import {motion} from "framer-motion";
 
 import "../../assets/styles/CategorySelect.css"
 

@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import {Button} from "react-bootstrap";
-import {AnimatePresence, motion} from "framer-motion";
+import {motion} from "framer-motion";
 
 import "../../assets/styles/About.css"
 

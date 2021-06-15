@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import {Button} from "react-bootstrap";
-import {Link, useParams, useHistory} from "react-router-dom"
+import {useParams, useHistory} from "react-router-dom"
 import Swal from 'sweetalert2'
-import {AnimatePresence, motion} from "framer-motion";
+import {motion} from "framer-motion";
 
 import "../../assets/styles/Test.css"
 import Answers from "./Answers.js"
@@ -27,7 +27,7 @@ const Test = () => {
     }
 
     let nextQuestion = () => {
-        if (Object.keys(curAnswer).length != 0) { // https://medium.com/@carlibotes/is-the-object-is-empty-afdabee326dc
+        if (Object.keys(curAnswer).length !== 0) { // https://medium.com/@carlibotes/is-the-object-is-empty-afdabee326dc
             let newCurrentQuestionIndex = curQuestionIndex + 1;
             setCurQuestionIndex(newCurrentQuestionIndex)
             setCurAnswers([...curAnswers, curAnswer])
@@ -49,7 +49,7 @@ const Test = () => {
 
     let submitAnswers = () => {
 
-        if (Object.keys(curAnswer).length != 0) {
+        if (Object.keys(curAnswer).length !== 0) {
             setCurAnswers([...curAnswers, curAnswer])
             
             let sum = 0;

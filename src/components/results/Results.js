@@ -5,7 +5,7 @@ import {
     buildStyles   
 } from 'react-circular-progressbar'
 import 'react-circular-progressbar/dist/styles.css'
-import {AnimatePresence, motion} from "framer-motion";
+import {motion} from "framer-motion";
 
 import "../../assets/styles/Results.css"
 

@@ -6,7 +6,7 @@ import {
   Row,
   Col,
 } from "react-bootstrap"
-import {BrowserRouter, Route, Switch, useLocation} from 'react-router-dom';
+import {BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import './assets/styles/App.css';
 import Navbar from "./components/Navbar.js"
