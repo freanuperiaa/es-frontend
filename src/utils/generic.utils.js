@@ -343,7 +343,7 @@ export const questions = {
                 ]
             }
         ],
-        "totalScore": 5
+        "totalScore": 7
     },
     "mania": {
         "questions": [
@@ -472,7 +472,8 @@ export const questions = {
                     },
                 ]
             }
-        ]
+        ],
+        totalScore: 5
     },
     "bipolar": {
         "questions": [
@@ -789,7 +790,7 @@ export const questions = {
                         "score": 0.5
                     },
                     {
-                        "answer": "No",
+                        "answer": "Several times",
                         "score": 1
                     },
                 ]

@@ -30,16 +30,16 @@ const Results = () => {
                             : "😖"
 
     let noneMessage = "You are in the clear! :) Make sure to take care of your mental health"
-    let mildMessage = "There's a low chance that you have"  + category + ". Reaching out to your friends and loved ones might help you with whatever you're feeing"
-    let highRistMessage = "You most likely have " + category + ". Please contact a psychiatrist whenever you are free"
-    let severeMessage = "You are at a very high risk of having" + category + ". Please contact a psychiatrist right away."
+    let mildMessage = "There's a low chance that you have "  + category + ". Reaching out to your friends and loved ones might help you with whatever you're feeling. Talking to a mental health professional will give you a better understanding."
+    let highRiskMessage = "You might have " + category + ". Please contact a psychiatrist whenever you are free"
+    let severeMessage = "You are at a high risk of having " + category + ". Please contact a psychiatrist right away."
 
     let message = (percentage < 25)
                     ? noneMessage
                     : (percentage < 50)
                         ? mildMessage
                         : (percentage < 75)
-                            ? highRistMessage
+                            ? highRiskMessage
                             : severeMessage
 
     return (

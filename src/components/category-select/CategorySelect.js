@@ -21,19 +21,19 @@ const CategorySelect = () => {
     }
 
     let onCatTwoClick = (e) => {
-        setCategory("category-two");
+        setCategory("anxiety");
     }
 
     let onCatThreeClick = (e) => {
-        setCategory("category-three");
+        setCategory("mania");
     }
 
     let onCatFourClick = (e) => {
-        setCategory("category-four");
+        setCategory("bipolar");
     }
 
     let onCatFiveClick = (e) => {
-        setCategory("category-five");
+        setCategory("ptsd");
     }
 
     return (
@@ -53,28 +53,28 @@ const CategorySelect = () => {
                     className="category-button cat-two"
                     onClick={onCatTwoClick}
                 >
-                    Category 2
+                    Anxiety
                 </Button>
 
                 <Button 
                     className="category-button cat-three"
                     onClick={onCatThreeClick}
                 >
-                    Category 3
+                    Mania
                 </Button>
 
                 <Button 
                     className="category-button cat-four"
                     onClick={onCatFourClick}
                 >
-                    Category 4
+                    Bipolar Disorder
                 </Button>
 
                 <Button 
                     className="category-button cat-five"
                     onClick={onCatFiveClick}
                 >
-                    Category 5
+                    Post-Traumatic Stress Disorder (PTSD)
                 </Button>
             </div>
 

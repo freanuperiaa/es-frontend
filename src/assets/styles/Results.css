@@ -17,6 +17,7 @@
     font-size: 28px;
     text-align: start;
     margin: 5px 25px 30px;
+    text-transform: capitalize;
 }
 
 .progressbar-container {
