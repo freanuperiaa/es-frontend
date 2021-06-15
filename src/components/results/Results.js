@@ -42,10 +42,18 @@ const Results = () => {
                             ? highRiskMessage
                             : severeMessage
 
+    let getTitle = () => {
+        if (category === "depression") return "Depression"
+        else if (category === "anxiety") return "Anxiety"
+        else if (category === "mania") return "Mania"
+        else if (category === "bipolar") return "Bipolar Disorder"
+        else if (category === "ptsd") return "Post-Traumatic Stress Disorder"
+    }
+
     return (
         <div className="results-container">
 
-            <p className="results-title">{category} Test Results</p>
+            <p className="results-title">{getTitle()} Test Results</p>
             
             <div className="progressbar-container">
                 {/* 

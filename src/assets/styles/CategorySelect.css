@@ -68,6 +68,7 @@
 .cat-five:focus, 
 .cat-five:active {
     background-color: #FFB1B0;
+    font-size: 18px;
 }
 
 .proceed-button-cont {

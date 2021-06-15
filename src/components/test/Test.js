@@ -82,12 +82,16 @@ const Test = () => {
 
     }
 
-    let getAnswers = () => {
+    let getTitle = () => {
         if (category === "depression") return "Depression"
         else if (category === "anxiety") return "Anxiety"
         else if (category === "mania") return "Mania"
         else if (category === "bipolar") return "Bipolar Disorder"
         else if (category === "ptsd") return "Post-Traumatic Stress Disorder"
+    }
+
+    let getCounterString = () => {
+        return (curQuestionIndex+1) + " out of " + currentQuestions.length
     }
 
     /**
@@ -99,10 +103,11 @@ const Test = () => {
 
     return (
         <div className="test-container">
-            <p className="title">{getAnswers()} Test</p>
+            <p className="title">{getTitle()} Test</p>
             <p className="sub-title">For the past two weeks, tell us to what extent you have experienced the following things:</p>
 
             <div className="question-answer">
+                <p className="counter">({getCounterString()})</p>
                 <p className="question">
                     {currentQuestions[curQuestionIndex].question}
                 </p>
