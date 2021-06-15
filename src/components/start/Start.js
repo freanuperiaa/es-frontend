@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {Button} from "react-bootstrap";
 import {Link} from 'react-router-dom';
+import {AnimatePresence, motion} from "framer-motion";
 
 import "../../assets/styles/Start.css"
 
@@ -24,32 +25,40 @@ const Start = () => {
     }
 
     return (
-        <div className="start-container">
-            <p className="before-anything animate__animated animate__fadeIn">
-                Before anything else,
-            </p>
-            
-            <p className="tell-you animate__animated animate__fadeIn">
-                we would like to tell you that whatever it is that you're feeling,
-            </p>
+        <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+        >
+            <div className="start-container">
+                <p className="before-anything animate__animated animate__fadeIn">
+                    Before anything else,
+                </p>
+                
+                <p className="tell-you animate__animated animate__fadeIn">
+                    we would like to tell you that whatever it is that you're feeling,
+                </p>
 
-            <p className="is-valid animate__animated animate__fadeIn">
-                    is <span className="valid animate__animated animate__flash">_valid_</span>.
-            </p>
+                <p className="is-valid animate__animated animate__fadeIn">
+                        is <span className="valid animate__animated animate__flash">_valid_</span>.
+                </p>
 
-            <div className="button-row">
-                <Link to="/category-select">
-                    <Button 
-                        className="continue-button animate__animated animate__pulse"
-                        style={buttonStyle}
-                    >
-                        Continue
-                    </Button>
-                </Link>
+                <div className="button-row">
+                    <Link to="/category-select">
+                        <Button 
+                            className="continue-button animate__animated animate__pulse"
+                            style={buttonStyle}
+                        >
+                            Continue
+                        </Button>
+                    </Link>
+                </div>
+
             </div>
 
-        </div>
-    );
+        </motion.div>
+        );
 }
 
 export default Start;

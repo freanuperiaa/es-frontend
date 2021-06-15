@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {Button} from "react-bootstrap";
 import {Link, useParams, useHistory} from "react-router-dom"
 import Swal from 'sweetalert2'
+import {AnimatePresence, motion} from "framer-motion";
 
 import "../../assets/styles/Test.css"
 import Answers from "./Answers.js"
@@ -102,55 +103,74 @@ const Test = () => {
     let totalScore = questions[category].totalScore
 
     return (
-        <div className="test-container">
-            <p className="title">{getTitle()} Test</p>
-            <p className="sub-title">For the past two weeks, tell us to what extent you have experienced the following things:</p>
 
-            <div className="question-answer">
-                <p className="counter">({getCounterString()})</p>
-                <p className="question">
-                    {currentQuestions[curQuestionIndex].question}
-                </p>
+        <motion.div 
+            initial={{ 
+                opacity: 0,
+                y: "-12%"
+            }}
+            animate={{ 
+                opacity: 1,
+                y: 0
+            }}
+            exit={{ 
+                opacity: 0,
+                y: "-100%"
+            }}
+            transition={{ duration: 0.5 }}
+        >
+            <div className="test-container">
+                <p className="title">{getTitle()} Test</p>
+                <p className="sub-title">For the past two weeks, tell us to what extent you have experienced the following things:</p>
 
-                <div className="answers">
-                    <Answers 
-                        answers={currentQuestions[curQuestionIndex].answers}
-                        selectAnswerCallback={selectAnswer}
-                    />
+                <div className="question-answer">
+                    <p className="counter">({getCounterString()})</p>
+                    <p className="question">
+                        {currentQuestions[curQuestionIndex].question}
+                    </p>
+
+                    <div className="answers">
+                        <Answers 
+                            answers={currentQuestions[curQuestionIndex].answers}
+                            selectAnswerCallback={selectAnswer}
+                        />
+                    </div>
                 </div>
-            </div>
 
-            <div className="buttons-row">
-                {
-                    curAnswers.length === 0
-                        ? <div></div>
-                        :   <Button 
-                                className="previous-button"
-                                onClick={previousQuestion}
+                <div className="buttons-row">
+                    {
+                        curAnswers.length === 0
+                            ? <div></div>
+                            :   <Button 
+                                    className="previous-button"
+                                    onClick={previousQuestion}
+                                >
+                                    Previous
+                                </Button>
+                    }
+
+                    {
+                        (curQuestionIndex + 1) < currentQuestions.length
+                            ? <Button 
+                                className="next-button"
+                                onClick={nextQuestion}
                             >
-                                Previous
+                                Next
                             </Button>
-                }
+                            : <Button
+                            className="proceed"
+                            onClick={() => {submitAnswers()}}
+                            >
+                            Submit Answers  
+                            </Button>
+                    }
+                </div>
 
-                {
-                    (curQuestionIndex + 1) < currentQuestions.length
-                        ? <Button 
-                              className="next-button"
-                              onClick={nextQuestion}
-                          >
-                              Next
-                          </Button>
-                        : <Button
-                          className="proceed"
-                          onClick={() => {submitAnswers()}}
-                        >
-                          Submit Answers  
-                        </Button>
-                }
             </div>
+        
 
-        </div>
-    )
+        </motion.div>
+        )
 }
 
 export default Test;

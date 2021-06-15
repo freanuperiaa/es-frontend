@@ -4,6 +4,7 @@ import {useHistory} from "react-router-dom"
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover'
 import Swal from 'sweetalert2'
+import {AnimatePresence, motion} from "framer-motion";
 
 import "../../assets/styles/CategorySelect.css"
 
@@ -120,96 +121,114 @@ const CategorySelect = () => {
     }
 
     return (
-        <div className="category-select-container">
-            <p className="main-text">Now please tell us,</p>
-            <p className="main-text">what are you most worried of?</p>
 
-            <div className="buttons-column">
+        <motion.div 
+            initial={{ 
+                opacity: 0,
+                y: "-20%"
+            }}
+            animate={{ 
+                opacity: 1,
+                y: 0
+            }}
+            exit={{ 
+                opacity: 0,
+                y: "-100%"
+             }}
+            transition={{ duration: 0.5 }}
+        >
+            <div className="category-select-container">
+                <p className="main-text">Now please tell us,</p>
+                <p className="main-text">what are you most worried of?</p>
+
+                <div className="buttons-column">
 
 
-                <OverlayTrigger
-                    placement="right"
-                    trigger="hover"
-                    delay={{show: 300, hide: 150}}
-                    overlay={popoverDepression}
-                >
-                    <Button 
-                        className="category-button cat-one"                
-                        onClick={onCatOneClick}
+                    <OverlayTrigger
+                        placement="right"
+                        trigger="hover"
+                        delay={{show: 300, hide: 150}}
+                        overlay={popoverDepression}
                     >
-                        Depression
-                    </Button>
-                </OverlayTrigger>
+                        <Button 
+                            className="category-button cat-one"                
+                            onClick={onCatOneClick}
+                        >
+                            Depression
+                        </Button>
+                    </OverlayTrigger>
 
-                
-                <OverlayTrigger
-                    placement="right"
-                    trigger="hover"
-                    delay={{show: 300, hide: 150}}
-                    overlay={popoverAnxiety}
-                >
-                    <Button 
-                        className="category-button cat-two"
-                        onClick={onCatTwoClick}
+                    
+                    <OverlayTrigger
+                        placement="right"
+                        trigger="hover"
+                        delay={{show: 300, hide: 150}}
+                        overlay={popoverAnxiety}
                     >
-                        Anxiety
-                    </Button>
-                </OverlayTrigger>
-                
-                <OverlayTrigger
-                    placement="right"
-                    trigger="hover"
-                    delay={{show: 300, hide: 150}}
-                    overlay={popoverMania}
-                >
-                    <Button 
-                        className="category-button cat-three"
-                        onClick={onCatThreeClick}
+                        <Button 
+                            className="category-button cat-two"
+                            onClick={onCatTwoClick}
+                        >
+                            Anxiety
+                        </Button>
+                    </OverlayTrigger>
+                    
+                    <OverlayTrigger
+                        placement="right"
+                        trigger="hover"
+                        delay={{show: 300, hide: 150}}
+                        overlay={popoverMania}
                     >
-                        Mania
-                    </Button>
-                </OverlayTrigger>
-                
-                <OverlayTrigger
-                    placement="right"
-                    trigger="hover"
-                    delay={{show: 300, hide: 150}}
-                    overlay={popoverBipolar}
-                >
-                    <Button 
-                        className="category-button cat-four"
-                        onClick={onCatFourClick}
+                        <Button 
+                            className="category-button cat-three"
+                            onClick={onCatThreeClick}
+                        >
+                            Mania
+                        </Button>
+                    </OverlayTrigger>
+                    
+                    <OverlayTrigger
+                        placement="right"
+                        trigger="hover"
+                        delay={{show: 300, hide: 150}}
+                        overlay={popoverBipolar}
                     >
-                        Bipolar Disorder
-                    </Button>
-                </OverlayTrigger>
-                
-                <OverlayTrigger
-                    placement="right"
-                    trigger="hover"
-                    delay={{show: 300, hide: 150}}
-                    overlay={popoverPTSD}
-                >
-                    <Button 
-                        className="category-button cat-five"
-                        onClick={onCatFiveClick}
+                        <Button 
+                            className="category-button cat-four"
+                            onClick={onCatFourClick}
+                        >
+                            Bipolar Disorder
+                        </Button>
+                    </OverlayTrigger>
+                    
+                    <OverlayTrigger
+                        placement="right"
+                        trigger="hover"
+                        delay={{show: 300, hide: 150}}
+                        overlay={popoverPTSD}
                     >
-                        Post-Traumatic Stress Disorder (PTSD)
+                        <Button 
+                            className="category-button cat-five"
+                            onClick={onCatFiveClick}
+                        >
+                            Post-Traumatic Stress Disorder (PTSD)
+                        </Button>
+                    </OverlayTrigger>
+                </div>
+
+                <div className="proceed-button-cont">
+                    <Button 
+                        className="proceed-button"
+                        onClick={() => {proceed()}}
+                    >
+                        Proceed
                     </Button>
-                </OverlayTrigger>
+                    
+                </div>
+
             </div>
 
-            <div className="proceed-button-cont">
-                <Button 
-                    className="proceed-button"
-                    onClick={() => {proceed()}}
-                >
-                    Proceed
-                </Button>
-                
-            </div>
-
-        </div>
+        </motion.div>
     )
 }
 

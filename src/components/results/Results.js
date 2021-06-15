@@ -5,6 +5,7 @@ import {
     buildStyles   
 } from 'react-circular-progressbar'
 import 'react-circular-progressbar/dist/styles.css'
+import {AnimatePresence, motion} from "framer-motion";
 
 import "../../assets/styles/Results.css"
 
@@ -67,57 +68,67 @@ const Results = () => {
     }
 
     return (
-        <div className="results-container">
 
-            <p className="results-title">{getTitle()} Test Results</p>
-            
-            <div className="progressbar-container">
-                {/* 
-                    TODO: add animation to progress bar. PLEASE
-                    https://github.com/kevinsqi/react-circular-progressbar#user-content-animating-text
-                */}
-                <CircularProgressbarWithChildren
-                    value={percentage}
-                    styles={buildStyles({
-                        pathColor: "#FCCFE4",
-                    })}
-                >
-                    <p className="inside-progress-image">
-                        {emoji}
-                    </p>
-                    <p className="inside-progress-text">
-                        {over}
-                    </p>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.75 }}
+        >
+            <div className="results-container">
 
-                </CircularProgressbarWithChildren>
+                <p className="results-title">{getTitle()} Test Results</p>
 
-            </div>
-            
-            <div className="results-body">
-                <p className="diagnosis">{message}</p>
-
-                <p className="message-for-all">{getLongMessage()}</p>
-
-                <p className="external-links">
-                    Read more about mental health &nbsp;
-                    <a 
-                        href="https://www.mentalhealth.gov/basics/what-is-mental-health"
-                        className ="link"
+                <div className="progressbar-container">
+                    {/* 
+                        TODO: add animation to progress bar. PLEASE
+                        https://github.com/kevinsqi/react-circular-progressbar#user-content-animating-text
+                    */}
+                    <CircularProgressbarWithChildren
+                        value={percentage}
+                        styles={buildStyles({
+                            pathColor: "#FCCFE4",
+                        })}
                     >
-                        <strong>here</strong>
-                    </a>.
-                    <br/><div className="nonce"></div>
-                    List of mental health professionals in the Philippines:&nbsp;
-                    <a 
-                        href="http://www.silakbo.ph/help/"
-                        className ="link"
-                    >
-                        <strong>here</strong>
-                    </a>.
-                </p>
+                        <p className="inside-progress-image">
+                            {emoji}
+                        </p>
+                        <p className="inside-progress-text">
+                            {over}
+                        </p>
+
+                    </CircularProgressbarWithChildren>
+
+                </div>
+
+                <div className="results-body">
+                    <p className="diagnosis">{message}</p>
+
+                    <p className="message-for-all">{getLongMessage()}</p>
+
+                    <p className="external-links">
+                        Read more about mental health &nbsp;
+                        <a 
+                            href="https://www.mentalhealth.gov/basics/what-is-mental-health"
+                            className ="link"
+                        >
+                            <strong>here</strong>
+                        </a>.
+                        <br/><div className="nonce"></div>
+                        List of mental health professionals in the Philippines:&nbsp;
+                        <a 
+                            href="http://www.silakbo.ph/help/"
+                            className ="link"
+                        >
+                            <strong>here</strong>
+                        </a>.
+                    </p>
+                </div>
             </div>
-        </div>
-    )
+
+
+        </motion.div>
+        )
 }
 
 export default Results;
