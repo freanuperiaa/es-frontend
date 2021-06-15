@@ -14,6 +14,11 @@
     padding: 10px 25px 5px; 
 }
 
+.app-title {
+    color: black;
+    text-decoration: none;
+    text-transform: none;
+}
 
 
 @media (max-width: 990px) {
