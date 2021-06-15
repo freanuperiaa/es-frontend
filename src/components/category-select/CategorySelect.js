@@ -17,7 +17,7 @@ const CategorySelect = () => {
     let [category, setCategory] = useState("");
 
     let onCatOneClick = (e) => {
-        setCategory("category-one");
+        setCategory("depression");
     }
 
     let onCatTwoClick = (e) => {
@@ -46,7 +46,7 @@ const CategorySelect = () => {
                     className="category-button cat-one"                
                     onClick={onCatOneClick}
                 >
-                    Category 1
+                    Depression
                 </Button>
 
                 <Button 

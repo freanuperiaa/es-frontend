@@ -86,7 +86,7 @@ const Test = () => {
      * let the static indexing ("depression") below be until the questions and categories are already set.
      */
 
-    let currentQuestions = questions["depression"].questions
+    let currentQuestions = questions[category].questions
     let totalScore = questions["depression"].totalScore
 
     return (
