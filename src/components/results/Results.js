@@ -90,7 +90,7 @@ const Results = () => {
                         href="https://www.mentalhealth.gov/basics/what-is-mental-health"
                         className ="link"
                     >
-                        here
+                        <strong>here</strong>
                     </a>.
                     <br/>
                     List of mental health professionals in the Philippines:&nbsp;
@@ -98,7 +98,7 @@ const Results = () => {
                         href="http://www.silakbo.ph/help/"
                         className ="link"
                     >
-                        here
+                        <strong>here</strong>
                     </a>.
                 </p>
             </div>

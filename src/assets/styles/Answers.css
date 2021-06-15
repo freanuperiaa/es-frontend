@@ -21,3 +21,10 @@
     color: black;
     border: 2px solid #FA92C1;
 }
+
+@media (max-width: 990px) {
+    .answer-button {
+        padding: 10px;
+        width: 65% !important;
+    }
+}

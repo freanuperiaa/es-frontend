@@ -83,15 +83,16 @@
 @media (max-width: 990px) {
 
     .home-container {
-        margin-top: 25%;
+        margin-top: 20%;
+        padding: 20px;
     }
 
     .buttons-row {
-        padding: 5px 0px;
+        padding: 5px !important;
     }
 
     .heading {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .subheading {
@@ -99,13 +100,13 @@
     }
 
     .about-button {
-        width: 80px;
+        width: 90px;
         height: 50px;
         font-size: 20px;
     }
 
     .start-button {
-        width: 80px;
+        width: 90px;
         height: 50px;
         font-size: 20px;
     }

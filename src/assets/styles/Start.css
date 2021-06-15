@@ -68,3 +68,38 @@
     background-color: lightblue;
     border: 0px;
 }
+
+@media (max-width: 990px) {
+    .start-container {
+        padding: 20px;
+    }
+
+    .before-anything {
+        font-size: 24px;
+    }
+
+
+    .tell-you {
+        margin-top: 15px;
+        font-size: 22px;   
+    }
+
+    .is-valid {
+        margin-top: 25px;
+        font-size: 24px;
+    }
+
+    .valid {
+        font-size: 25px;
+    }
+
+    .button-row {
+        justify-content: center;
+    }
+
+    .continue-button {
+        width: 140px;
+        height: 60px;
+        font-size: 22px;
+    }
+}

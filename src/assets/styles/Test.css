@@ -112,3 +112,42 @@ body > div.swal2-container.swal2-center.swal2-backdrop-show > div > div.swal2-ac
     /* I literally copied it from inspector tools lol */
     background-color:#FA92C1;
 }
+
+@media (max-width: 990px) {
+    .test-container {
+        margin: 0px 0px 10%;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .sub-title,
+    .question {
+        font-size: 18px;
+    }
+
+    .buttons-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 40px;
+        margin: 35px 5px 5px;
+    }
+
+    .next-button,
+    .previous-button {
+        width: 85px;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .proceed {
+        width: 95px;
+        height: 75px;
+        font-size: 16px;
+    }
+
+}

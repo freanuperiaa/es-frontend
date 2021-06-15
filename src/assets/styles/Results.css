@@ -44,4 +44,32 @@
 
 .external-links {
     font-size: 16px;
+    font-family: "Source Code Pro Light";
+}
+
+@media (max-width: 990px) {
+    .results-container {
+        margin: 0px 0px 10%;
+
+        padding: 20px;
+    }
+
+    .results-title {
+        font-size: 24px;
+        text-align: start;
+    }
+
+    .progressbar-container {
+        width: 65%;
+        height: 65%;
+    }
+
+    .diagnosis {
+        margin-top: 25px;
+        font-size: 20px;
+    }
+
+    .message-for-all {
+        font-size: 16px;
+    }
 }
