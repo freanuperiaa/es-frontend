@@ -48,6 +48,48 @@
     font-family: "Source Code Pro Light";
 }
 
+.buttons-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    margin-top: 50px;
+}
+
+.start-button {
+    background-color: lightblue;
+    border: 0px;
+    color: black;
+    font-style: "Source Code Pro";
+    width: 120px;
+    height: 70px;
+    font-size: 18px;
+}
+
+.start-button:hover,
+.start-button:focus {
+    background-color: lightblue;
+    border: 0px;
+}
+
+.about-button {
+    background-color: lightgrey;
+    border: 0px;
+    color: black;
+    font-style: "Source Code Pro";
+    width: 120px;
+    height: 60px;
+    font-size: 24px;
+}
+
+.about-button:hover,
+.about-button:focus {
+    background-color: lightgrey;
+    border: 0px;
+}
+
+
 @media (max-width: 990px) {
     .results-container {
         margin: 0px 0px 10%;
@@ -77,4 +119,22 @@
     .nonce {
         height: 25px;
     }
+
+    .buttons-row {
+        padding: 5px !important;
+    }
+
+    .about-button {
+        width: 90px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .start-button {
+        width: 90px;
+        height: 60px;
+        font-size: 14px;
+    }
+
+
 }

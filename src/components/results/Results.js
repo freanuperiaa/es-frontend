@@ -4,6 +4,8 @@ import {
     CircularProgressbarWithChildren, 
     buildStyles   
 } from 'react-circular-progressbar'
+import {Button} from "react-bootstrap"
+import {Link} from 'react-router-dom'
 import 'react-circular-progressbar/dist/styles.css'
 import {motion} from "framer-motion";
 
@@ -124,7 +126,20 @@ const Results = () => {
                         </a>.
                     </p>
                 </div>
+
+                <div className="buttons-row">
+                    <Link to="/about">
+                        <Button className="about-button">About</Button>
+                    </Link>
+                    <Link to="/category-select">
+                        <Button className="start-button">
+                            Take another test
+                        </Button>
+                    </Link>
+                </div>
             </div>
+
+            
 
 
         </motion.div>
