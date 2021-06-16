@@ -57,7 +57,7 @@
     margin-top: 50px;
 }
 
-.start-button {
+.another-button {
     background-color: lightblue;
     border: 0px;
     color: black;
@@ -67,8 +67,8 @@
     font-size: 18px;
 }
 
-.start-button:hover,
-.start-button:focus {
+.another-button:hover,
+.another-button:focus {
     background-color: lightblue;
     border: 0px;
 }
@@ -130,7 +130,7 @@
         font-size: 20px;
     }
 
-    .start-button {
+    .another-button {
         width: 90px;
         height: 60px;
         font-size: 14px;

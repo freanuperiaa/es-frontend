@@ -132,7 +132,7 @@ const Results = () => {
                         <Button className="about-button">About</Button>
                     </Link>
                     <Link to="/category-select">
-                        <Button className="start-button">
+                        <Button className="another-button">
                             Take another test
                         </Button>
                     </Link>
